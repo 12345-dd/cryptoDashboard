@@ -1,8 +1,20 @@
-# React + Vite
+# Crypto Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Material UI crypto dashboard that consumes CoinGecko.
 
-Currently, two official plugins are available:
+## Features
+- All coins table (rank, name/symbol, icon, price, 24h change, market cap, 24h volume)
+- Pagination, search (debounced), clickable rows -> detail modal
+- Highlights: Top gainers, top losers, trending
+- Loading & error states, basic client-side caching
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run
+1. Copy `.env.example` to `.env`
+2. `npm install`
+3. `npm start`
+
+## Notes
+- API: CoinGecko (no key required for typical endpoints)
+- Design decisions: small reusable components, API adapter, simple hooks
+- Future: add tests, server-side pagination, websocket real-time updates
+

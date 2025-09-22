@@ -3,8 +3,6 @@ import { Dialog, DialogTitle, DialogContent, Typography, Box } from '@mui/materi
 import { coinDetails } from '../../api/coingecko';
 import Loader from '../Shared/Loader';
 
-// Basic modal showing small description and some market numbers.
-// Keep it lightweight (assignment asks for lightweight detail)
 export default function CoinDetailsModal({ open, onClose, coin }) {
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(false);

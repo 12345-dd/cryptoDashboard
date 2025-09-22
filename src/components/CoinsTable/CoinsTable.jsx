@@ -50,7 +50,7 @@ export default function CoinsTable() {
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
         <TablePagination
           component="div"
-          count={1000}                    /* note: CoinGecko has many coins; count approximate */
+          count={1000}                   
           page={page}
           onPageChange={(e, p) => setPage(p)}
           rowsPerPage={perPage}

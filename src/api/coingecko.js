@@ -1,8 +1,3 @@
-/**
- * API adapter for CoinGecko (Vite version).
- * Uses env var VITE_COINGECKO_API and optional VITE_COINGECKO_API_KEY
- */
-
 import axios from 'axios';
 
 const BASE = import.meta.env.VITE_COINGECKO_API || 'https://api.coingecko.com/api/v3';

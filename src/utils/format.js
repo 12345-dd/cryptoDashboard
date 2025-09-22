@@ -1,6 +1,5 @@
 export const formatCurrency = (v) => {
   if (v == null) return '-';
-  // show dollars with thousands separator
   return '$' + Number(v).toLocaleString();
 };
 

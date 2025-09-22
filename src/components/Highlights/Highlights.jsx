@@ -3,15 +3,6 @@ import { Grid } from '@mui/material';
 import HighlightCard from './HighlightCard';
 import { markets, trending } from '../../api/coingecko';
 
-/**
- * Highlights:
- * - Top gainers (24h)
- * - Top losers (24h)
- * - Trending (CoinGecko endpoint)
- *
- * We fetch a reasonably large page (per_page=100) and compute gainers/losers client-side.
- */
-
 export default function Highlights() {
   const [gainers, setGainers] = useState([]);
   const [losers, setLosers] = useState([]);
@@ -34,14 +25,12 @@ export default function Highlights() {
           name: c.item.name,
           symbol: c.item.symbol,
           image: c.item.small,
-          // trending endpoint doesn't provide price in USD here — leave null
           current_price: null,
           price_change_percentage_24h: null
         }));
         setTr(coins);
       } catch (e) {
-        // Don't fail whole page if highlights fail; keep them empty
-        // console.debug('Highlights load failed', e);
+        console.debug('Highlights load failed', e);
       }
     }
 

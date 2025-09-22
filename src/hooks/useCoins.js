@@ -1,12 +1,3 @@
-/**
- * useCoins - simple data hook with tiny client-side cache.
- * - page is 1-indexed for API
- * - perPage: number of records per page
- * - search: simple name/symbol filter (client-side)
- *
- * NOTE: For very large apps, implement server-side search/paging.
- */
-
 import { useEffect, useState, useRef } from 'react';
 import { markets } from '../api/coingecko';
 
